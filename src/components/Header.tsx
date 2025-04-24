@@ -16,10 +16,11 @@ const Header = () => {
       <div className="container mx-auto py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <div className="font-bold text-2xl">
-              <span className="text-formation-red">FORMATION</span>{" "}
-              <span className="text-formation-blue">EN ANGLAIS</span>
-            </div>
+            <img 
+              src="/lovable-uploads/c223b934-43c3-4e2c-924d-4f5190a2f220.png" 
+              alt="Formation en Anglais Logo" 
+              className="h-12 w-auto mr-4"
+            />
           </Link>
 
           {/* Mobile menu button */}
