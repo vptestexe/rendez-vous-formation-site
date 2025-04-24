@@ -17,7 +17,7 @@ const LearningMethodsCarousel = () => {
           <CarouselContent>
             <CarouselItem>
               <img 
-                src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78"  // Online learning
+                src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78"  // Online language learning
                 alt="Formation en ligne"
                 className="w-full h-[400px] object-cover rounded-lg"
               />
@@ -25,7 +25,7 @@ const LearningMethodsCarousel = () => {
             </CarouselItem>
             <CarouselItem>
               <img 
-                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f"  // One-on-one tutoring
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f"  // One-on-one language tutoring
                 alt="Cours particuliers"
                 className="w-full h-[400px] object-cover rounded-lg"
               />
@@ -33,7 +33,7 @@ const LearningMethodsCarousel = () => {
             </CarouselItem>
             <CarouselItem>
               <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"  // Group learning
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"  // Group language learning
                 alt="Formation en groupe"
                 className="w-full h-[400px] object-cover rounded-lg"
               />
