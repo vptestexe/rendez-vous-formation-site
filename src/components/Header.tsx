@@ -19,7 +19,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/c223b934-43c3-4e2c-924d-4f5190a2f220.png" 
               alt="Formation en Anglais Logo" 
-              className="h-12 w-auto mr-4"
+              className="h-16 w-auto mr-4"  // Augmenté de h-12 à h-16
             />
           </Link>
 
