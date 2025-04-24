@@ -8,8 +8,8 @@ const HeroSection = () => {
     <section className="relative bg-gradient-to-r from-formation-blue to-formation-red text-white py-20">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
-          alt="People learning English"
+          src="https://images.unsplash.com/photo-1524995997955-2a34c2d186b2"  // Language classroom with students
+          alt="Étudiants apprenant l'anglais"
           className="w-full h-full object-cover opacity-20"
         />
       </div>
