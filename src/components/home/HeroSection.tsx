@@ -1,17 +1,12 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 const HeroSection = () => {
-  return (
-    <section className="relative bg-gradient-to-r from-formation-blue to-formation-red text-white py-20">
+  return <section className="relative bg-gradient-to-r from-formation-blue to-formation-red text-white py-20">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1524995997955-2a34c2d186b2"  // Language classroom with students
-          alt="Étudiants apprenant l'anglais"
-          className="w-full h-full object-cover opacity-20"
-        />
+        <img
+      // Language classroom with students
+      alt="Étudiants apprenant l'anglais" className="w-full h-full object-cover opacity-20" src="/lovable-uploads/d79af802-ebfd-457c-a720-1b54333c1840.jpg" />
       </div>
       <div className="container mx-auto text-center relative z-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -33,8 +28,6 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
