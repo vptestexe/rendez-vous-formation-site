@@ -3,6 +3,7 @@ import React from 'react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ImmigrationServiceDialogProps {
   trigger: React.ReactNode;
@@ -58,7 +59,7 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
           
           <div className="flex justify-center">
             <Button className="bg-formation-red hover:bg-red-700" asChild>
-              <a href="/immigration">Découvrir nos services en détail</a>
+              <Link to="/immigration">Découvrir nos services en détail</Link>
             </Button>
           </div>
         </div>
