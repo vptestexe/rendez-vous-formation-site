@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe, Users, Briefcase, Gavel } from 'lucide-react';
+import { Users, Briefcase, Gavel } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ImmigrationServiceDialog from './ImmigrationServiceDialog';
 
@@ -10,19 +10,19 @@ const ImmigrationServices = () => {
     {
       country: "Canada",
       description: "Un pays multiculturel offrant de nombreuses opportunités professionnelles et une excellente qualité de vie.",
-      icon: Globe,
+      flag: "🇨🇦",
       benefits: ["Programme Express Entry", "Visa étudiant", "Permis de travail"]
     },
     {
       country: "France",
       description: "Une destination prisée pour son riche patrimoine culturel et son système éducatif renommé.",
-      icon: Users,
+      flag: "🇫🇷",
       benefits: ["Visa long séjour", "Carte de séjour", "Regroupement familial"]
     },
     {
       country: "Belgique",
       description: "Au cœur de l'Europe, la Belgique offre un environnement international et dynamique.",
-      icon: Briefcase,
+      flag: "🇧🇪",
       benefits: ["Permis unique", "Visa professionnel", "Carte bleue européenne"]
     }
   ];
@@ -41,8 +41,8 @@ const ImmigrationServices = () => {
           {destinations.map((destination) => (
             <Card key={destination.country} className="hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center bg-formation-red rounded-full text-white">
-                  <destination.icon size={32} />
+                <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center text-4xl">
+                  {destination.flag}
                 </div>
                 <CardTitle className="text-2xl">{destination.country}</CardTitle>
               </CardHeader>
