@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
+import { AlertTriangleIcon } from 'lucide-react'; // Using Lucide React icon instead
 
 export const NotificationHelper = () => {
   return (
     <Alert variant="destructive" className="mb-4">
-      <ExclamationTriangleIcon className="h-4 w-4 mt-1" />
+      <AlertTriangleIcon className="h-4 w-4 mt-1" />
       <AlertTitle>Configuration requise</AlertTitle>
       <AlertDescription className="text-sm">
         Pour activer les notifications par email et WhatsApp, vous devez d'abord:
