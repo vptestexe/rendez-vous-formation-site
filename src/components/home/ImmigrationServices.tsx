@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Globe, Users, Briefcase, Gavel } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import ImmigrationServiceDialog from './ImmigrationServiceDialog';
 
 const ImmigrationServices = () => {
   const destinations = [
@@ -31,7 +31,7 @@ const ImmigrationServices = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Services d'Immigration</h2>
+          <h2 className="text-3xl font-bold mb-4">EB MALAK INTERNATIONAL</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous vous accompagnons dans votre projet d'immigration vers le Canada, la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
@@ -62,11 +62,13 @@ const ImmigrationServices = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/contact">
-            <Button size="lg" className="bg-formation-red hover:bg-red-700">
-              Planifier une consultation
-            </Button>
-          </Link>
+          <ImmigrationServiceDialog 
+            trigger={
+              <Button size="lg" className="bg-formation-red hover:bg-red-700">
+                Voudriez-vous immigrer vers ces pays ?
+              </Button>
+            } 
+          />
         </div>
       </div>
     </section>
