@@ -12,8 +12,10 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { toast } from 'sonner';
 import { Check, CalendarIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLocation } from 'react-router-dom';
 
 const RendezVous = () => {
+  const location = useLocation();
   const [date, setDate] = useState<Date | undefined>();
   const [timeSlot, setTimeSlot] = useState<string>('');
   const [formationTypeId, setFormationTypeId] = useState<string>('');
@@ -27,6 +29,13 @@ const RendezVous = () => {
   const [formStep, setFormStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
 
+  // Initialize formationTypeId if coming from immigration page
+  React.useEffect(() => {
+    if (location.state?.fromImmigration) {
+      setFormationTypeId('immigration');
+    }
+  }, [location.state]);
+
   const formationTypes = [
     { id: 'general', name: 'Anglais général' },
     { id: 'affaires', name: 'Anglais des affaires' },
@@ -36,7 +45,8 @@ const RendezVous = () => {
     { id: 'toeic', name: 'Préparation TOEIC' },
     { id: 'gre', name: 'Préparation GRE' },
     { id: 'gmat', name: 'Préparation GMAT' },
-    { id: 'tef', name: 'Préparation TEF' }
+    { id: 'tef', name: 'Préparation TEF' },
+    { id: 'immigration', name: 'Services d\'Immigration' }
   ];
 
   const timeSlots = [
@@ -56,12 +66,34 @@ const RendezVous = () => {
     setFormStep(1);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare the appointment data
+      const appointmentData = {
+        date: date ? format(date, 'yyyy-MM-dd') : '',
+        timeSlot,
+        serviceType: formationTypes.find(f => f.id === formationTypeId)?.name || '',
+        contact: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+        },
+        message: formData.message,
+        createdAt: new Date().toISOString()
+      };
+
+      console.log('Submitting appointment:', appointmentData);
+      
+      // Here we would normally call a Supabase function to store the appointment
+      // and send notifications, but for now let's simulate it
+      
+      // Simulate API call/success
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
       toast.success('Rendez-vous demandé avec succès!', {
         description: 'Nous vous contacterons pour confirmer votre rendez-vous.',
         icon: <Check className="h-4 w-4" />
@@ -79,8 +111,14 @@ const RendezVous = () => {
         message: ''
       });
       setFormStep(1);
+    } catch (error) {
+      console.error('Error submitting appointment:', error);
+      toast.error('Une erreur est survenue', {
+        description: 'Veuillez réessayer ou nous contacter directement.',
+      });
+    } finally {
       setSubmitting(false);
-    }, 1500);
+    }
   };
 
   const isStepOneComplete = () => {

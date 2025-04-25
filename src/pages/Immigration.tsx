@@ -5,16 +5,24 @@ import { Globe, Users, Briefcase, Gavel, Check, MapPin, Calendar, FileText } fro
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
 import ImmigrationServices from '@/components/home/ImmigrationServices';
+import AppointmentButton from '@/components/home/AppointmentButton';
+import NotificationHelper from '@/components/home/NotificationHelper';
 
 const Immigration = () => {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">Services d'Immigration</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             EB MALAK INTERNATIONAL vous accompagne dans votre projet d'immigration vers le Canada, la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
+          <AppointmentButton 
+            serviceType="immigration" 
+            className="bg-formation-red hover:bg-red-700 text-white"
+            size="lg"
+          />
+          <NotificationHelper />
         </div>
 
         <Tabs defaultValue="process" className="mb-12">
