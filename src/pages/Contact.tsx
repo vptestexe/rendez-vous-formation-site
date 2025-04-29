@@ -160,6 +160,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold mb-2">INFOLINE</h3>
                     <p className="mb-1">
+                      <a href="tel:0778191752" className="hover:text-formation-red">07 78 19 17 52</a>
+                    </p>
+                    <p className="mb-1">
                       <a href="tel:0707579728" className="hover:text-formation-red">07 07 57 97 28</a>
                     </p>
                     <p className="mb-1">
