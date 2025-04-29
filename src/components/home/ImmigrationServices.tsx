@@ -31,11 +31,10 @@ const ImmigrationServices = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 animate-pulse">EB MALAK INTERNATIONAL</h2>
+          <h2 className="text-3xl font-bold mb-4 animate-pulse">AGENCE VOYAGES SANS FRONTIERES SARL - COTE D'IVOIRE</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous vous accompagnons dans votre projet d'immigration vers le Canada, la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
-          <div className="mt-2 font-medium text-formation-blue">INFOLINE: 07 78 19 17 52</div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">

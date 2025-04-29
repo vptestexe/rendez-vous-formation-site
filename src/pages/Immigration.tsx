@@ -45,15 +45,16 @@ const Immigration = () => {
         >
           <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-formation-blue via-formation-red to-orange-500 animate-pulse">Services d'Immigration</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-            EB MALAK INTERNATIONAL vous accompagne dans votre projet d'immigration vers le Canada, 
+            AGENCE VOYAGES SANS FRONTIERES SARL vous accompagne dans votre projet d'immigration vers le Canada, 
             la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
-          <div className="text-formation-blue font-medium text-lg mb-6 animate-bounce">INFOLINE: 07 78 19 17 52</div>
-          <AppointmentButton 
-            serviceType="immigration" 
-            className="bg-formation-red hover:bg-red-700 text-white animate-pulse transform hover:scale-105 transition-transform duration-300"
-            size="lg"
-          />
+          <div className="flex justify-center">
+            <AppointmentButton 
+              serviceType="immigration" 
+              className="bg-formation-red hover:bg-red-700 text-white animate-pulse transform hover:scale-105 transition-transform duration-300"
+              size="lg"
+            />
+          </div>
           <NotificationHelper />
         </div>
 
@@ -303,10 +304,9 @@ const Immigration = () => {
         
         <div className="bg-gray-50 rounded-lg p-8 mb-12 transform transition-all duration-500 hover:shadow-lg">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Pourquoi Choisir EB MALAK INTERNATIONAL ?</h2>
+            <h2 className="text-3xl font-bold mb-4">Pourquoi Choisir AGENCE VOYAGES SANS FRONTIERES SARL ?</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Notre équipe d'experts en immigration vous offre un service sur mesure et un accompagnement complet dans toutes les étapes de votre projet.
-              <span className="block mt-2 text-formation-blue font-medium">INFOLINE: 07 78 19 17 52</span>
             </p>
           </div>
           

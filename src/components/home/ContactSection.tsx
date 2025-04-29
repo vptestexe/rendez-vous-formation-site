@@ -14,7 +14,7 @@ const ContactSection = () => {
         <div className="flex flex-col md:flex-row justify-center gap-4 max-w-md mx-auto">
           <div className="flex-1">
             <p className="font-bold mb-2">INFOLINE</p>
-            <p className="mb-1">07 07 57 97 28</p>
+            <p className="mb-1">07 78 19 17 52</p>
             <p className="mb-1">01 72 95 53 23</p>
             <p>05 44 81 88 07</p>
           </div>

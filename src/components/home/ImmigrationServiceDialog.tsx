@@ -17,7 +17,7 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center animate-pulse">EB MALAK INTERNATIONAL</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-center animate-pulse">AGENCE VOYAGES SANS FRONTIERES SARL</DialogTitle>
           <DialogDescription className="text-center pt-2">
             Services d'accompagnement à l'immigration
           </DialogDescription>
@@ -54,7 +54,7 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
           </ul>
           
           <p className="text-sm text-gray-600 mb-6">
-            EB MALAK INTERNATIONAL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation. <span className="font-medium text-formation-blue">INFOLINE: 07 78 19 17 52</span>
+            AGENCE VOYAGES SANS FRONTIERES SARL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation.
           </p>
           
           <div className="flex justify-center">
