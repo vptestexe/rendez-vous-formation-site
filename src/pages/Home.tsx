@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import LearningMethodsCarousel from '@/components/home/LearningMethodsCarousel';
 import TrainingPrograms from '@/components/home/TrainingPrograms';
@@ -9,6 +9,10 @@ import ContactSection from '@/components/home/ContactSection';
 import ImmigrationServices from '@/components/home/ImmigrationServices';
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "AGENCE VOYAGES SANS FRONTIERES SARL - COTE D'IVOIRE";
+  }, []);
+
   return (
     <div>
       <HeroSection />

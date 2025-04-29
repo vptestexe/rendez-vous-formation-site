@@ -1,12 +1,22 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [animateLogo, setAnimateLogo] = useState(false);
   const location = useLocation();
+
+  // Animation effect for the logo
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimateLogo(true);
+      setTimeout(() => setAnimateLogo(false), 2000);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,12 +33,18 @@ const Header = () => {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/c223b934-43c3-4e2c-924d-4f5190a2f220.png" 
-              alt="Formation en Anglais Logo" 
-              className="h-16 w-auto mr-4"
-            />
+          <Link to="/" className="flex flex-col items-center">
+            <div className={`relative transition-transform duration-1000 ${animateLogo ? 'transform translate-y-[-5px]' : ''}`}>
+              <img 
+                src="/lovable-uploads/6961b549-9c1e-4b8a-993b-8ffb58527566.png" 
+                alt="Agence Voyages Sans Frontières Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
+            <div className="text-center">
+              <h1 className="font-bold text-sm text-formation-blue">AGENCE VOYAGES SANS FRONTIERES SARL</h1>
+              <p className="text-xs text-orange-500">COTE D'IVOIRE</p>
+            </div>
           </Link>
 
           {/* Mobile menu button */}
@@ -60,11 +76,14 @@ const Header = () => {
             <Link to="/contact" className={isActive("/contact") ? activeClassNames : "font-medium hover:text-formation-red transition-colors"}>
               Contact
             </Link>
-            <Link to="/rendez-vous">
-              <Button className="bg-formation-red hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105">
-                Prendre rendez-vous
-              </Button>
-            </Link>
+            <div className="flex items-center">
+              <span className="font-medium text-formation-blue mr-4">INFOLINE: 07 07 57 97 28</span>
+              <Link to="/rendez-vous">
+                <Button className="bg-formation-red hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105">
+                  Prendre rendez-vous
+                </Button>
+              </Link>
+            </div>
           </nav>
         </div>
 
@@ -106,6 +125,7 @@ const Header = () => {
             >
               Contact
             </Link>
+            <div className="font-medium text-formation-blue py-2">INFOLINE: 07 07 57 97 28</div>
             <Link to="/rendez-vous" onClick={() => setIsMenuOpen(false)}>
               <Button className="w-full bg-formation-red hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105">
                 Prendre rendez-vous
