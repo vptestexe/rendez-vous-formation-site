@@ -77,7 +77,7 @@ const Header = () => {
               Contact
             </Link>
             <div className="flex items-center">
-              <span className="font-medium text-formation-blue mr-4">INFOLINE: 07 78 19 17 52</span>
+              <span className="font-medium text-formation-blue mr-4">INFOLINE: 07 07 57 97 28</span>
               <Link to="/rendez-vous">
                 <Button className="bg-formation-red hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105">
                   Prendre rendez-vous
@@ -125,7 +125,7 @@ const Header = () => {
             >
               Contact
             </Link>
-            <div className="font-medium text-formation-blue py-2">INFOLINE: 07 78 19 17 52</div>
+            <div className="font-medium text-formation-blue py-2">INFOLINE: 07 07 57 97 28</div>
             <Link to="/rendez-vous" onClick={() => setIsMenuOpen(false)}>
               <Button className="w-full bg-formation-red hover:bg-red-700 text-white transition-all duration-300 transform hover:scale-105">
                 Prendre rendez-vous
