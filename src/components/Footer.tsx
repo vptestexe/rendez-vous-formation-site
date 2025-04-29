@@ -51,6 +51,11 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>INFOLINE:</li>
               <li>
+                <a href="tel:0778191752" className="hover:text-formation-red">
+                  07 78 19 17 52
+                </a>
+              </li>
+              <li>
                 <a href="tel:0707579728" className="hover:text-formation-red">
                   07 07 57 97 28
                 </a>

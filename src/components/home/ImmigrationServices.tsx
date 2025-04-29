@@ -31,7 +31,7 @@ const ImmigrationServices = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">EB MALAK INTERNATIONAL</h2>
+          <h2 className="text-3xl font-bold mb-4 animate-pulse">EB MALAK INTERNATIONAL</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous vous accompagnons dans votre projet d'immigration vers le Canada, la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
@@ -39,8 +39,12 @@ const ImmigrationServices = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {destinations.map((destination) => (
-            <Card key={destination.country} className="hover:shadow-lg transition-shadow transform hover:-translate-y-1 duration-300">
+          {destinations.map((destination, index) => (
+            <Card 
+              key={destination.country} 
+              className="hover:shadow-lg transition-shadow transform hover:-translate-y-1 duration-300"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <CardHeader className="text-center">
                 <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center text-4xl">
                   {destination.flag}
@@ -65,7 +69,7 @@ const ImmigrationServices = () => {
         <div className="text-center">
           <ImmigrationServiceDialog 
             trigger={
-              <Button size="lg" className="bg-formation-red hover:bg-red-700 animate-pulse">
+              <Button size="lg" className="bg-formation-red hover:bg-red-700 animate-pulse transform hover:scale-105 transition-transform duration-300">
                 Voudriez-vous immigrer vers ces pays ?
               </Button>
             } 

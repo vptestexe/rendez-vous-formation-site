@@ -39,18 +39,19 @@ const Immigration = () => {
     <div className="py-8">
       <div className="container mx-auto px-4">
         <div 
-          className={`text-center mb-8 transition-all duration-700 transform ${
+          className={`text-center mb-12 transition-all duration-700 transform ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h1 className="text-4xl font-bold mb-4">Services d'Immigration</h1>
+          <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-formation-blue via-formation-red to-orange-500 animate-pulse">Services d'Immigration</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             EB MALAK INTERNATIONAL vous accompagne dans votre projet d'immigration vers le Canada, 
             la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
+          <div className="text-formation-blue font-medium text-lg mb-6 animate-bounce">INFOLINE: 07 78 19 17 52</div>
           <AppointmentButton 
             serviceType="immigration" 
-            className="bg-formation-red hover:bg-red-700 text-white animate-pulse"
+            className="bg-formation-red hover:bg-red-700 text-white animate-pulse transform hover:scale-105 transition-transform duration-300"
             size="lg"
           />
           <NotificationHelper />

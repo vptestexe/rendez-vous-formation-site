@@ -17,7 +17,7 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">EB MALAK INTERNATIONAL</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-center animate-pulse">EB MALAK INTERNATIONAL</DialogTitle>
           <DialogDescription className="text-center pt-2">
             Services d'accompagnement à l'immigration
           </DialogDescription>
@@ -29,22 +29,22 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
             Notre équipe d'experts vous offre un accompagnement personnalisé pour concrétiser votre projet d'immigration vers:
           </p>
           
-          <ul className="space-y-3 mb-6">
-            <li className="flex items-start">
+          <ul className="space-y-3 mb-6 animate-fade-in">
+            <li className="flex items-start hover:translate-x-1 transition-transform duration-300">
               <span className="text-2xl mr-2 flex-shrink-0">🇨🇦</span>
               <div>
                 <span className="font-medium">Canada</span>
                 <p className="text-sm text-gray-600">Programmes Express Entry, Visa étudiant, Permis de travail</p>
               </div>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start hover:translate-x-1 transition-transform duration-300">
               <span className="text-2xl mr-2 flex-shrink-0">🇫🇷</span>
               <div>
                 <span className="font-medium">France</span>
                 <p className="text-sm text-gray-600">Visa long séjour, Carte de séjour, Regroupement familial</p>
               </div>
             </li>
-            <li className="flex items-start">
+            <li className="flex items-start hover:translate-x-1 transition-transform duration-300">
               <span className="text-2xl mr-2 flex-shrink-0">🇧🇪</span>
               <div>
                 <span className="font-medium">Belgique</span>
@@ -54,11 +54,11 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
           </ul>
           
           <p className="text-sm text-gray-600 mb-6">
-            EB MALAK INTERNATIONAL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation. <span className="font-medium">INFOLINE: 07 78 19 17 52</span>
+            EB MALAK INTERNATIONAL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation. <span className="font-medium text-formation-blue">INFOLINE: 07 78 19 17 52</span>
           </p>
           
           <div className="flex justify-center">
-            <Button className="bg-formation-red hover:bg-red-700" asChild>
+            <Button className="bg-formation-red hover:bg-red-700 transform hover:scale-105 transition-transform duration-300" asChild>
               <Link to="/immigration">Découvrir nos services en détail</Link>
             </Button>
           </div>
