@@ -54,7 +54,7 @@ const ImmigrationServiceDialog: React.FC<ImmigrationServiceDialogProps> = ({ tri
           </ul>
           
           <p className="text-sm text-gray-600 mb-6">
-            EB MALAK INTERNATIONAL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation.
+            EB MALAK INTERNATIONAL vous accompagne dans toutes les étapes, de l'évaluation initiale jusqu'à l'obtention de votre visa et votre installation. <span className="font-medium">INFOLINE: 07 78 19 17 52</span>
           </p>
           
           <div className="flex justify-center">

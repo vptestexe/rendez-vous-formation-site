@@ -35,11 +35,12 @@ const ImmigrationServices = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Nous vous accompagnons dans votre projet d'immigration vers le Canada, la France ou la Belgique avec une approche personnalisée et professionnelle.
           </p>
+          <div className="mt-2 font-medium text-formation-blue">INFOLINE: 07 78 19 17 52</div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {destinations.map((destination) => (
-            <Card key={destination.country} className="hover:shadow-lg transition-shadow">
+            <Card key={destination.country} className="hover:shadow-lg transition-shadow transform hover:-translate-y-1 duration-300">
               <CardHeader className="text-center">
                 <div className="mx-auto w-16 h-16 mb-4 flex items-center justify-center text-4xl">
                   {destination.flag}
@@ -50,7 +51,7 @@ const ImmigrationServices = () => {
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <ul className="space-y-2">
                   {destination.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-center text-gray-700">
+                    <li key={benefit} className="flex items-center text-gray-700 hover:translate-x-1 transition-transform duration-300">
                       <Gavel className="w-4 h-4 mr-2 text-formation-red" />
                       {benefit}
                     </li>
@@ -64,7 +65,7 @@ const ImmigrationServices = () => {
         <div className="text-center">
           <ImmigrationServiceDialog 
             trigger={
-              <Button size="lg" className="bg-formation-red hover:bg-red-700">
+              <Button size="lg" className="bg-formation-red hover:bg-red-700 animate-pulse">
                 Voudriez-vous immigrer vers ces pays ?
               </Button>
             } 
